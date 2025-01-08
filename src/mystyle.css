@@ -1,0 +1,159 @@
+body {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size:initial;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 2;
+    /* display: grid;
+    grid-template-columns: 1fr 2fr;
+    */
+    box-shadow: 0 35px 55px rgba(0, 0, 0, .2) ; 
+    
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    /* background-color: black; */
+    background: linear-gradient(0deg, transparent, transparent, #003147, #43f3ff, #0c5d83);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: -50%;
+    left: -50%;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#leftside {
+    min-height: 1000px;
+    background: #003147;
+    padding: 0 30px 0 30px;
+    /* margin: 0 10px 0 0 ; */
+    z-index: 3;
+    inset: 4px;
+}
+
+#rightside {
+    min-height: 1000px;
+    width: 100%;
+    background: #fff;
+    text-align: justify;
+    z-index: 3;
+    inset: 4px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+#picbox {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#profile {
+    width: 100%;
+    object-fit: cover;
+}
+
+#part_profile {
+    border-bottom: 1px #fff solid;
+    
+}
+
+.bolder {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
+}
+#leftside ul li {
+    text-decoration: none;
+    list-style: none;
+}
+#contacts {
+    line-height: 120%;
+}
+
+.languagebar {
+    margin-top: 5px;
+    height: 10px;
+    border-radius: 5px;
+    /* background: rgb(7, 186, 241); */
+    background: rgba(0, 0, 0, .5);
+    font-size: smaller;
+    overflow: hidden;
+}
+
+.skillsbar, .filledbar {
+    height: 10px;
+    width: 100%;
+}
+
+.firstcol {
+    width: 35%;
+    line-height: 20px;
+    font-size: small;
+}
+.listTasks {
+    line-height: 20px;
+    font-size: small;
+}
+.skillsbar {
+    border-radius: 5px;
+    background: #e3e3e3;
+    height: 15px;
+    padding: 0;
+    /* width: 100px; */
+    overflow: hidden;
+}
+
+.linkspan {
+    text-decoration: none;
+}
+
+.fillskills {
+    position: relative;
+    height: 15px;
+    background: #0c5d83;
+}
+
+.interest {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Animation */
+.text.sec-text {
+    color: #43f3ff;
+    font-weight: bold;
+}
